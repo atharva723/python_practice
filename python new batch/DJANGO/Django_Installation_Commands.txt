@@ -1,0 +1,32 @@
+# While creating new project
+
+
+python -m venv myenv
+
+myenv\Scripts\activate
+
+pip install django
+
+django-admin startproject myproject
+
+cd myproject 
+
+code .    # VS code will open 
+
+Use keyboard shortcut --- ctrl + shift + ` or else click on terminal and inside that select new terminal
+        and select command prompt
+
+python manage.py runserver / py manage.py runserver
+
+
+
+# When just  opening project
+
+
+myenv\Scripts\activate
+
+cd myproject 
+
+code .
+
+
