@@ -1,0 +1,21 @@
+Loan Policy Rules
+
+1. Minimum salary required for personal loan is 25,000 per month.
+
+2. Minimum credit score required is 700.
+
+3. Maximum Debt To Income (DTI) ratio allowed is 55%.
+
+4. Maximum loan amount allowed is 20 times the monthly salary.
+
+5. Interest rate typically ranges between 9% to 13%.
+
+6. Maximum loan tenure allowed is 7 years.
+
+7. Existing EMI obligations should not exceed 40% of salary.
+
+8. Applicants with credit score above 750 get priority approval.
+
+9. Applicants with credit score below 650 are considered high risk.
+
+10. Salary stability of at least 6 months preferred.

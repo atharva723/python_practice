@@ -1,0 +1,197 @@
+Bank Loan Eligibility & Policy Knowledge Base
+1. Overview
+
+This document defines the internal lending policies used for automated loan eligibility screening.
+The AI system retrieves these rules when evaluating customer loan requests based on:
+
+Salary / Monthly Income
+
+Credit Score
+
+Existing EMI obligations
+
+Loan type requested
+
+Loan tenure
+
+Loan amount requested
+
+The goal is to determine:
+
+Loan eligibility
+
+Maximum loan amount
+
+Suitable loan product
+
+Recommended tenure and EMI structure
+
+2. Common Eligibility Rules
+2.1 Minimum Age
+
+Minimum age: 21 years
+
+Maximum age at loan maturity: 65 years
+
+2.2 Credit Score Requirements
+Credit Score Range	Risk Category	Lending Decision
+750+	Excellent	Full eligibility
+700 – 749	Good	Eligible with standard interest
+650 – 699	Moderate	Eligible with higher interest
+600 – 649	High Risk	Restricted loan amount
+Below 600	Very High Risk	Usually rejected
+2.3 EMI Burden Ratio Rule
+
+Total EMI obligations should not exceed:
+
+50% of monthly income
+
+Formula:
+
+Total EMI Ratio = (Existing EMIs + Proposed EMI) / Monthly Income
+
+Decision rules:
+
+EMI Ratio	Decision
+<= 40%	Safe lending
+41–50%	Moderate risk
+>50%	Loan not recommended
+3. Loan Categories
+
+The bank offers the following loan products.
+
+Personal Loan
+
+Home Loan
+
+Car Loan
+
+Education Loan
+
+Each category has separate rules.
+
+4. Personal Loan Policy
+4.1 Eligibility
+
+Minimum monthly income: ₹30,000
+
+Credit score requirements:
+
+Credit Score	Max Loan Amount
+750+	₹20,00,000
+700 – 749	₹15,00,000
+650 – 699	₹10,00,000
+<650	Not eligible
+4.2 Tenure
+
+Minimum tenure: 12 months
+
+Maximum tenure: 60 months
+
+4.3 Interest Rate
+Credit Score	Interest Rate
+750+	10%
+700 – 749	12%
+650 – 699	14%
+5. Home Loan Policy
+5.1 Eligibility
+
+Minimum monthly income: ₹50,000
+
+Loan amount limits depend on income.
+
+Monthly Income	Maximum Loan
+₹50k – ₹75k	₹30,00,000
+₹75k – ₹1.5L	₹60,00,000
+₹1.5L+	₹1,20,00,000
+5.2 Tenure
+
+Minimum tenure: 5 years
+
+Maximum tenure: 30 years
+
+5.3 Interest Rate
+Credit Score	Interest Rate
+750+	8.5%
+700 – 749	9%
+650 – 699	10%
+6. Car Loan Policy
+6.1 Eligibility
+
+Minimum monthly income: ₹25,000
+
+Maximum loan based on salary:
+
+Salary	Max Loan
+₹25k – ₹50k	₹7,00,000
+₹50k – ₹1L	₹12,00,000
+₹1L+	₹20,00,000
+6.2 Tenure
+
+Minimum tenure: 12 months
+
+Maximum tenure: 84 months
+
+6.3 Interest Rate
+Credit Score	Interest Rate
+750+	8%
+700 – 749	9%
+650 – 699	11%
+7. Education Loan Policy
+7.1 Eligibility
+
+Co-applicant required (parent/guardian)
+
+Minimum credit score: 650
+
+Maximum loan amount:
+
+Study Type	Max Loan
+Domestic education	₹20,00,000
+International education	₹50,00,000
+7.2 Tenure
+
+Course duration + 10 years repayment
+
+7.3 Interest Rate
+Credit Score	Interest Rate
+750+	9%
+700 – 749	10%
+650 – 699	11.5%
+8. Loan Decision Logic
+
+The AI system should evaluate loan eligibility in the following order:
+
+Extract user information from chat:
+
+Salary
+
+Credit score
+
+Existing EMI
+
+Loan amount requested
+
+Loan type
+
+Preferred tenure
+
+Retrieve relevant policy rules using RAG.
+
+Validate:
+
+Age eligibility
+
+Credit score threshold
+
+Income requirement
+
+EMI ratio
+
+Determine:
+
+Eligibility status
+
+Maximum possible loan
+
+Suitable loan plan
