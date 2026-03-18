@@ -1,0 +1,16 @@
+Internal Advisory Notes
+
+Customers with high income sometimes overspend → hidden risk.
+Some users under-report expenses → actual DTI may be higher.
+
+Edge Cases:
+- Freelancers → income variability
+- Sudden large expenses → savings drop
+- Users with zero EMI but zero savings → still risky
+
+Important:
+System recommendations are advisory only.
+Final decisions depend on user behavior and external factors.
+
+NOTE:
+Not all users follow ideal financial discipline.
